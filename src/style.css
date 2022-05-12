@@ -43,6 +43,11 @@ body {
     gap: 2rem;
 }
 
-.places > div:hover {
+.places > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.places > a:hover {
     color: #e75c20;
 }
