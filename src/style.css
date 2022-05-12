@@ -9,3 +9,40 @@ body {
     padding: 0;
     font-family: var(--radioCanada-font);
 }
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    height: 8vh;
+    position: sticky;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.logo,
+.places {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.logo > img {
+    height: 8vh;
+    padding: 3px;
+}
+
+.logo > div {
+    font-family: var(--koulen-font);
+    font-size: 2.5rem;
+}
+
+.places {
+    gap: 2rem;
+}
+
+.places > div:hover {
+    color: #e75c20;
+}
