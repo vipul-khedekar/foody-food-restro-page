@@ -1,4 +1,4 @@
-export function createTopBar() {
+function createTopBar() {
     const body = document.querySelector(`body`);
 
     const topBarContainer = document.createElement(`div`);
@@ -17,14 +17,17 @@ export function createTopBar() {
     const logoName = document.createElement(`div`);
     logoName.innerText = `Foody Food`;
 
-    const placesAbout = document.createElement(`div`);
+    const placesAbout = document.createElement(`a`);
     placesAbout.innerText = `About`;
+    placesAbout.href = `../src/landing.js`;
 
-    const placesMenu = document.createElement(`div`);
+    const placesMenu = document.createElement(`a`);
     placesMenu.innerText = `Menu`;
+    placesMenu.href = `../src/menu.js`;
 
-    const placesContact = document.createElement(`div`);
+    const placesContact = document.createElement(`a`);
     placesContact.innerText = `Contact`;
+    placesContact.href = `../src/contact.js`;
 
     logoContainer.append(logoImg);
     logoContainer.append(logoName);
@@ -34,4 +37,8 @@ export function createTopBar() {
     topBarContainer.append(logoContainer);
     topBarContainer.append(placesContainer);
     body.append(topBarContainer);
+}
+
+export {
+    createTopBar,
 }
