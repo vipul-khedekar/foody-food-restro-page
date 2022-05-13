@@ -51,3 +51,72 @@ body {
 .places > a:hover {
     color: #e75c20;
 }
+
+.landing-page-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 50vh 50vh;
+    height: 100vh;
+}
+
+.hero-container {
+    box-sizing: border-box;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-image: url(../src/assets/images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    height: 50vh;
+    position: relative;
+    text-align: center;
+}
+
+.hero-container > p {
+    width: max-content;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: #000000 0px 5px 10px;
+}
+
+.hero-container > button {
+    background-color: #e75c20;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 8px;
+    transform: translate(-50%, -50%);   /*Do more research about this topic*/
+    box-shadow: #000000 0px 5px 15px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.description-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 1rem;
+}
+
+.description-container > p {
+    max-width: 450px;
+    font-size: 1.2rem;
+}
+
+.description-container > img {
+    height: 80%;
+    border-radius: 45px;
+    box-shadow: #000000 0px 5px 10px
+}
