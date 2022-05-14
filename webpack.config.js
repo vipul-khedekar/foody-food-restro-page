@@ -7,11 +7,6 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     },
-    performance: {
-        hints: false,
-        maxEntrypointSize: 512000,
-        maxAssetSize: 512000
-    },
     module: {
         rules: [
             {
@@ -24,7 +19,19 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
-                use: 'url-loader?mimetype=image/png',
+                loader: 'file-loader',
+                options: {
+                    name: 'img/[name].[ext]',
+                    publicPath: '/',
+                },
+            },
+            {
+                test: /\.(ttf|eot|woff|woff2)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'fonts/[name].[ext]',
+                    publicPath: '/'
+                },
             },
         ],
     },
